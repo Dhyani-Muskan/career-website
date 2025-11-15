@@ -10,36 +10,44 @@
                 height: 360px;
                 width: 100%;
                 object-fit: cover;
+                margin-bottom: 16px;
             }
             .custom-container {
-                padding-left: 150px;
-                padding-right: 150px;
+                padding-left: 120px;
+                padding-right: 120px;
             }
         </style>
     </head>
 
     <body>
-        <div class="container custom-container">
-        <h1 class="text-center mt-4 mb-4"> WORKZYS CAREERS </h1>
+        {% include 'nav.html' %}
         <img class="img-fluid" id="banner" src="/static/banner.jpeg">
-        <h2 class="text-center mt-4 mb-4">About Workzys</h2>
-        <p class="lead text-center ">Welcome to the Workzys Careers Portal, your gateway to joining a team dedicated to excellence, innovation, 
-            and growth. Here, you can explore all current job openings across our departments, learn about the values 
-            that drive us, and understand what makes our work environment unique. Our streamlined application process 
-            allows you to apply quickly and securely, while giving you all the information you need to make the best 
-            decision for your career. Whether you’re an experienced professional or just starting out, Workzys offers 
-            opportunities to grow, contribute, and make an impact</p>
-
-        <h2 class="text-center mt-4 mb-4" >Job Openings</h2>
-        <p>
-            {% for job in jobs %}
-               {% include 'jobitem.html' %} 
-            {% endfor %}
-        </p>
-        <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">copyright 2025, Workzys</p>
+        <div class="container">
+            <h1 class="text-center mt-4 mb-4"> WORKZYS CAREERS </h1>
+            <div class="row" style="margin-bottom: 16px;">
+                <div class="col-md-6">
+                    <p class="lead text-center" style="margin-left: 40px;">Welcome to the Workzys Careers Portal, your gateway to joining a team dedicated to excellence, innovation, 
+                    and growth. Here, you can explore all current job openings across our departments, learn about the values 
+                    that drive us, and understand what makes our work environment unique. Our streamlined application process 
+                    allows you to apply quickly and securely, while giving you all the information you need to make the best 
+                    decision for your career. Whether you’re an experienced professional or just starting out, Workzys offers 
+                    opportunities to grow, contribute, and make an impact</p>
+            
+            </div>
+            <div class="d-none d-md-block col-6 ">
+                <img src="/static/work.jpg" style="height: 320px; border-radius: 4px; margin-left: 80px;">
+            </div>
+            <h2 class="text-center mt-4 mb-4" >Job Openings</h2>
+            </div>
+            <p>
+                {% for job in jobs %}
+                    {% include 'jobitem.html' %} 
+                {% endfor %}
+            </p>
+            <div class="text-center">
+            <a href="mailto:muskandhyani9@gmail.com?" class="btn btn-primary btn-lg">Contact Us</a>
+            </div>
         </div>
-        </div>
+        {% include 'footer.html' %}
     </body>
 </html>
