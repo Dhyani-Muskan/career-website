@@ -11,22 +11,26 @@
                 width: 100%;
                 object-fit: cover;
             }
+            .custom-container {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
         </style>
     </head>
 
     <body>
-        <div class="container">
+        <div class="container custom-container">
         <h1 class="text-center mt-4 mb-4"> WORKZYS CAREERS </h1>
         <img class="img-fluid" id="banner" src="/static/banner.jpeg">
         <h2 class="text-center mt-4 mb-4">About Workzys</h2>
-        <p class="lead">Welcome to the Workzys Careers Portal, your gateway to joining a team dedicated to excellence, innovation, 
+        <p class="lead text-center ">Welcome to the Workzys Careers Portal, your gateway to joining a team dedicated to excellence, innovation, 
             and growth. Here, you can explore all current job openings across our departments, learn about the values 
             that drive us, and understand what makes our work environment unique. Our streamlined application process 
             allows you to apply quickly and securely, while giving you all the information you need to make the best 
             decision for your career. Whether you’re an experienced professional or just starting out, Workzys offers 
             opportunities to grow, contribute, and make an impact</p>
 
-        <h2 class="text-center mt-4 mb-4" >Open positions</h2>
+        <h2 class="text-center mt-4 mb-4" >Job Openings</h2>
         <p>
             {% for job in jobs %}
                {% include 'jobitem.html' %} 
